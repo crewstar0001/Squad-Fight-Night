@@ -940,7 +940,15 @@ document.addEventListener("DOMContentLoaded", ()=>{
       </div></div>
 
       <div class="gstep"><div class="gstep-check"></div><div class="gstep-body">
-        <h5>3 &middot; Run the old build</h5>
+        <h5>3 &middot; Clear your current Squad settings</h5>
+        <p>The old build shares a settings folder with your normal Squad, and the newer settings crash it on launch. Renaming that folder lets the old build start clean &mdash; nothing is deleted and your current install isn't touched.</p>
+        <p class="guide-note">Press Win + R, paste this, and hit Enter:</p>
+        <div class="cmdrow"><span class="txt">%LOCALAPPDATA%</span><button type="button" data-copy="%LOCALAPPDATA%">Copy</button></div>
+        <p>Find the folder named <b>Squad</b> and rename it to <b>Squad_backup</b>. Rename it back anytime to restore your normal Squad settings.</p>
+      </div></div>
+
+      <div class="gstep"><div class="gstep-check"></div><div class="gstep-body">
+        <h5>4 &middot; Run the old build</h5>
         <p>Find the files: in Steam, right-click Squad &rarr; Manage &rarr; Browse local files. In the window that opens, click up to the <b>steamapps</b> folder, then go into content &rarr; app_393380 &rarr; depot_393381.</p>
         <p class="guide-note">Or paste this into the File Explorer address bar (swap the drive if Steam isn't on C:):</p>
         <div class="cmdrow"><span class="txt">C:\Program Files (x86)\Steam\steamapps\content\app_393380\depot_393381</span><button type="button" data-copy="C:\Program Files (x86)\Steam\steamapps\content\app_393380\depot_393381">Copy</button></div>
@@ -949,7 +957,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       </div></div>
 
       <div class="gstep plain"><div class="gstep-body">
-        <h5>4 &middot; Find the server in-game and join</h5>
+        <h5>5 &middot; Find the server in-game and join</h5>
         <p>In the old build's server browser, search this exact name and join:</p>
         <div class="cmdrow"><span class="txt" id="guide-server">Server name&hellip;</span><button type="button" data-copy="__SERVER__">Copy</button></div>
         <p class="guide-note">Textures look odd after switching versions? Settings &rarr; clear cache fixes it.</p>
