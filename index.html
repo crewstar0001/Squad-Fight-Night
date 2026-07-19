@@ -218,6 +218,25 @@
     100%{ transform:translate(0,0); }
   }
   @media (prefers-reduced-motion:reduce){ .ico .crosshair{ animation:none; } }
+  .bracket{
+    border:1px solid var(--line);
+    background:radial-gradient(circle at 60% 45%, var(--panel), var(--night-2) 78%);
+    position:relative; padding:26px 18px 18px;
+  }
+  .bracket .tag{
+    position:absolute; top:10px; left:10px;
+    font-family:var(--ff-mono); font-size:.64rem; letter-spacing:.18em; font-weight:700;
+    color:var(--amber); border:1px solid rgba(240,130,30,.4); padding:3px 8px;
+  }
+  .bracket svg{ width:100%; height:auto; display:block; }
+  .rollcall{ margin-top:16px; border-top:1px solid var(--line-soft); padding-top:14px; }
+  .rollcall .rc-label{
+    display:block; font-family:var(--ff-mono); font-size:.62rem; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--amber); margin-bottom:7px;
+  }
+  .rollcall p{
+    margin:0; font-family:var(--ff-mono); font-size:.72rem; line-height:1.9; color:var(--ghost);
+  }
   .caption-note{ font-family:var(--ff-mono); font-size:.72rem; color:var(--ghost); margin-top:14px; text-align:center; }
 
   /* ============================================================
@@ -385,15 +404,15 @@
   <div class="grid-bg"></div>
   <div class="wrap hero-inner">
     <div>
-      <div class="kicker">PRE-ICO&nbsp;&middot;&nbsp;OLD-VERSION&nbsp;&middot;&nbsp;<b>PUB NIGHTS</b></div>
+      <div class="kicker">PRE-ICO&nbsp;BUILD&nbsp;&middot;&nbsp;OPEN&nbsp;TO&nbsp;ALL&nbsp;&middot;&nbsp;<b>COMPETITIVE NIGHTS</b></div>
       <h1 class="wordmark">
         <span class="lo">Squad</span>
         <span class="hi"><span class="k">Fight</span> Night</span>
       </h1>
       <p class="lede">
-        A recurring pub night on an older build of Squad &mdash; for players who miss the
-        <b>higher skill ceiling</b> of pre-ICO firefights. Tighter sway, snappier engagements,
-        gunplay that rewards mechanics again. Coordinated when you want it, lone-wolf when you can pull it off.
+        A recurring night on the build Squad's <b>competitive era</b> was played on &mdash; back when
+        clans drilled for weeks and winning actually meant something. Most of us never got to play it.
+        This is your shot to find out what everyone's been talking about.
       </p>
       <div class="cta-row">
         <a href="#signup" class="btn primary">Get on the roster &rarr;</a>
@@ -422,62 +441,83 @@
 <section id="why">
   <div class="wrap">
     <span class="eyebrow">Situation</span>
-    <h2 class="section-title">The ICO moved the goalposts</h2>
+    <h2 class="section-title">When winning meant something</h2>
     <div class="two">
       <div class="prose">
         <p>
-          The <b>Infantry Combat Overhaul</b> is the most debated update in Squad's history. The argument was
-          never really about realism &mdash; it was about whether combat should hinge on <b>individual mechanical skill</b>
-          or on positioning and teamwork.
+          Before September 2023, Squad had a <b>real competitive scene</b>. Clans ran tryouts. Squads
+          practiced the same map for weeks. Matches were scheduled, scrimmed, argued about afterward.
+          A championship wasn't a badge in a Discord &mdash; it was months of work by forty people who
+          showed up every week.
         </p>
         <p>
-          Offworld's stated goal was to lengthen firefights, reward coordinated squads, and reduce lone-wolf play by
-          making aim less decisive. Plenty of players think that was the right call. Plenty of others miss the
-          <b>old ceiling</b> &mdash; where a sharp shooter could carry a fight &mdash; and there just isn't an easy place for
-          them to play it anymore.
+          That era was played on a specific build of the game, and when the <b>Infantry Combat Overhaul</b>
+          landed in 6.0 it changed the game underneath it. Whatever you think of the update &mdash; and plenty
+          of people think it made Squad better &mdash; the version those seasons were played on simply
+          stopped being available.
         </p>
-        <p>That's the whole point of Fight Night. What the ICO changed:</p>
+        <p>
+          <b>Most players today never got to touch it.</b> If you started after the ICO, you've heard the
+          stories secondhand and had no way to see what the fuss was about. Fight Night is that way in:
+          the original build, organized teams, and stakes that carry from one night to the next.
+        </p>
         <ul class="changelist">
-          <li>Much heavier weapon sway</li>
-          <li>Stronger suppression effects</li>
-          <li>More stamina impact on aiming</li>
-          <li>Weapon stabilization + point / deadzone aiming</li>
-          <li>Picture-in-picture scopes</li>
-          <li>Bigger penalties for firing right after moving</li>
+          <li>The build that built the teams &mdash; orgs founded in this era are still recruiting today</li>
+          <li>Firefights that end decisively &mdash; gunplay that rewards the push</li>
+          <li>Squads that actually talk: calls, coordination, vets showing new players the ropes</li>
+          <li>Original competitive maps and layers, run on AAS &mdash; not a random pub rotation</li>
+          <li>Open to everyone: veterans, post-ICO players, first-timers</li>
         </ul>
       </div>
 
       <div>
-        <div class="reticles">
-          <div class="ret pre">
-            <span class="tag">PRE-ICO</span>
-            <svg viewBox="0 0 200 200" aria-hidden="true">
-              <g class="crosshair" stroke="var(--sage)" stroke-width="2" fill="none">
-                <circle cx="100" cy="100" r="3" fill="var(--sage)" stroke="none"/>
-                <line x1="100" y1="66" x2="100" y2="86"/>
-                <line x1="100" y1="114" x2="100" y2="134"/>
-                <line x1="66" y1="100" x2="86" y2="100"/>
-                <line x1="114" y1="100" x2="134" y2="100"/>
-              </g>
-            </svg>
-            <span class="meta">SWAY &middot; LOCKED</span>
-          </div>
-          <div class="ret ico">
-            <span class="tag">ICO</span>
-            <svg viewBox="0 0 200 200" aria-hidden="true">
-              <g class="crosshair" stroke="var(--danger)" stroke-width="2" fill="none" opacity=".95">
-                <circle cx="100" cy="100" r="3" fill="var(--danger)" stroke="none"/>
-                <line x1="100" y1="44" x2="100" y2="78"/>
-                <line x1="100" y1="122" x2="100" y2="156"/>
-                <line x1="44" y1="100" x2="78" y2="100"/>
-                <line x1="122" y1="100" x2="156" y2="100"/>
-                <circle cx="100" cy="100" r="52" stroke-dasharray="4 8" opacity=".5"/>
-              </g>
-            </svg>
-            <span class="meta">SWAY &middot; BLOOM + DRIFT</span>
-          </div>
+        <div class="bracket">
+          <span class="tag">SQUAD MASTERS S1 &middot; MAY 2021</span>
+          <svg viewBox="0 0 360 250" aria-hidden="true">
+            <!-- semifinal feeds -->
+            <g stroke="var(--line)" stroke-width="1.5" fill="none">
+              <path d="M104 46 H150 V78 H176"/>
+              <path d="M104 110 H150 V78"/>
+              <path d="M104 166 H150 V198 H176"/>
+              <path d="M104 230 H150 V198"/>
+            </g>
+            <!-- final feeds -->
+            <g stroke="var(--sand-dim)" stroke-width="1.5" fill="none">
+              <path d="M176 78 H206 V138 H236"/>
+              <path d="M176 198 H206 V138"/>
+            </g>
+            <!-- seeds -->
+            <g font-family="monospace" font-size="9.5" letter-spacing="1">
+              <text x="8" y="42" fill="var(--sage)">RAVEN ZULU</text>
+              <text x="8" y="106" fill="var(--ghost)">BAGUETTE KEBAB SQUAD</text>
+              <text x="8" y="162" fill="var(--sage)">MUMBLERINES</text>
+              <text x="8" y="226" fill="var(--ghost)">BLAKL1ST</text>
+            </g>
+            <!-- finalists -->
+            <g font-family="monospace" font-size="9" letter-spacing="1.5">
+              <text x="180" y="72" fill="var(--sand)">RAVEN ZULU</text>
+              <text x="180" y="192" fill="var(--sand)">MUMBLERINES</text>
+            </g>
+            <!-- champion -->
+            <g transform="translate(288 138)">
+              <circle r="26" fill="none" stroke="var(--amber)" stroke-width="1.5" opacity=".6"/>
+              <circle r="37" fill="none" stroke="var(--amber)" stroke-width="1.5"
+                      opacity=".22" stroke-dasharray="3 7"/>
+              <path d="M0 -11 L9.5 0 L0 11 L-9.5 0 Z" fill="var(--amber)"/>
+            </g>
+            <text x="288" y="196" fill="var(--amber)" font-family="monospace" font-size="8.5"
+                  letter-spacing="2" text-anchor="middle">CHAMPION</text>
+            <text x="288" y="210" fill="var(--sand-dim)" font-family="monospace" font-size="8"
+                  letter-spacing="1" text-anchor="middle">RAVEN ZULU</text>
+          </svg>
         </div>
-        <p class="caption-note">Same target. Two different skill ceilings. Fight Night runs the one on the left.</p>
+        <p class="caption-note">Squad Masters Season 1 &mdash; Raven Zulu over Mumblerines, with BKS taking third. Real teams, real stakes, on this build.</p>
+        <div class="rollcall">
+          <span class="rc-label">Others who showed up</span>
+          <p>Speaking in Tongues &middot; The Doctors Office &middot; Sigma Tactical &middot; Blueberry eSports &middot;
+             United Convicts &middot; Misfit Platoon &middot; Some Random Guys &middot; Difficult Language Coalition &middot;
+             International Logi Laborers</p>
+        </div>
       </div>
     </div>
   </div>
@@ -551,8 +591,8 @@
         <div class="field">
           <label for="s-exp">When did you start Squad?</label>
           <select id="s-exp" name="experience">
-            <option value="Pre-ICO veteran">Pre-ICO veteran &mdash; I remember the old ceiling</option>
-            <option value="Post-ICO">Post-ICO &mdash; started after the overhaul</option>
+            <option value="Pre-ICO veteran">Pre-ICO veteran &mdash; I played the old days</option>
+            <option value="Post-ICO">Post-ICO &mdash; never got to play this build</option>
             <option value="Pre-order / early">Pre-order / early access</option>
             <option value="Curious / new">Just curious / new</option>
           </select>
@@ -632,7 +672,7 @@
   <div class="wrap foot-grid">
     <div>
       <div class="foot-brand">Squad Fight Night</div>
-      <p class="foot-note">A community-run pub night for older-version Squad. Built by players who miss the old skill ceiling, for players who feel the same.</p>
+      <p class="foot-note">A community-run night on older-version Squad. Built so the competitive era isn't just a story people tell &mdash; whether you were there for it or missed it entirely.</p>
     </div>
     <div>
       <p class="foot-note">
